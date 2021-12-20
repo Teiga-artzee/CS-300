@@ -1,0 +1,14 @@
+RUNTIME ANALYSIS
+	Using a vector in a linked list, the best-case scenario for a search is O(N). The worst-case scenario is calculated by first looking at the outer loop. 
+  It will execute N-1 times while the inner loop will execute N/2 times. Calculating these executions together: (N-1) * (N/2) = O(N^2)
+	Using a Hash Table, the best-case scenario for a search is O(1). 
+  This is due to the hash creating a key and immediately being able to access it using a unique identifier. 
+  However, the worse case is O(N) because if there is a collision in the Hash Table that isn’t the correct key, it will need to search through the entire table till it either finds the correct element or it reaches an element that has never been assigned a value. 
+  If either of these occur, the search ends.
+	Using a Binary Search tree, the worst-case scenario is O(H), where H is the height of the tree. 
+  Height is calculated with: H=⌊〖log〗_2 N⌋. The search for the tree is calculated with the Node Binary Tree Height which can be as small as O(logN) which yields the best-case.
+	Depending on the size of the data being used, using the proper algorithm to store data is crucial. 
+  For small sets of data, using a linked list wouldn’t result in slow runtime. 
+  For medium sized sets of data, a Hash Table is more reliable and capable of handling the runtime to search and perform actions on this data. 
+  For large data sets, a Binary Search Tree is the most capable of handling the required processing and searching on data.
+	Considering the size of the data set for ABC University and the courses they offer, using a Binary Search Tree would be the most efficient way to organize and store this data without compromising the programs runtime.
